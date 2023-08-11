@@ -72,7 +72,7 @@ uint32 bitstream::resize_capacity(uint32 size_in_bits)
     clear();
 
     uint32 byte_size = align(size_in_bits, 8) >> 3;
-    data_store = new uint8[byte_size];
+    data_store = new uint8[byte_size]{0};
 
     if (!data_store) 
     {
